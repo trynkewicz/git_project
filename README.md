@@ -1,54 +1,31 @@
-pip install psycopg2
-Collecting psycopg2
-  Using cached psycopg2-2.9.11.tar.gz (379 kB)
-  Installing build dependencies ... done
-  Getting requirements to build wheel ... error
-  error: subprocess-exited-with-error
-  
-  × Getting requirements to build wheel did not run successfully.
-  │ exit code: 1
-  ╰─> [34 lines of output]
-      /tmp/pip-build-env-7dxxa9kj/overlay/lib/python3.12/site-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.
-      !!
-      
-              ********************************************************************************
-              Please consider removing the following classifiers in favor of a SPDX license expression:
-      
-              License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)
-      
-              See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
-              ********************************************************************************
-      
-      !!
-        self._finalize_license_expression()
-      running egg_info
-      writing psycopg2.egg-info/PKG-INFO
-      writing dependency_links to psycopg2.egg-info/dependency_links.txt
-      writing top-level names to psycopg2.egg-info/top_level.txt
-      
-      Error: pg_config executable not found.
-      
-      pg_config is required to build psycopg2 from source.  Please add the directory
-      containing pg_config to the $PATH or specify the full executable path with the
-      option:
-      
-          python setup.py build_ext --pg-config /path/to/pg_config build ...
-      
-      or with the pg_config option in 'setup.cfg'.
-      
-      If you prefer to avoid building psycopg2 from source, please install the PyPI
-      'psycopg2-binary' package instead.
-      
-      For further information please check the 'doc/src/install.rst' file (also at
-      <https://www.psycopg.org/docs/install.html>).
-      
-      [end of output]
-  
-  note: This error originates from a subprocess, and is likely not a problem with pip.
-error: subprocess-exited-with-error
+(trending-it-py3.12) trynkewicz@trynkewicz-VMware-Virtual-Platform:~/project/trending-it$ poetry install
+Installing dependencies from lock file
 
-× Getting requirements to build wheel did not run successfully.
-│ exit code: 1
-╰─> See above for output.
+pyproject.toml changed significantly since poetry.lock was last generated. Run `poetry lock [--no-update]` to fix the lock file.
+(trending-it-py3.12) trynkewicz@trynkewicz-VMware-Virtual-Platform:~/project/trending-it$ vim pyproject.toml 
+(trending-it-py3.12) trynkewicz@trynkewicz-VMware-Virtual-Platform:~/project/trending-it$ poetry install
+Installing dependencies from lock file
 
-note: This error originates from a subprocess, and is likely not a problem with pip.
+pyproject.toml changed significantly since poetry.lock was last generated. Run `poetry lock [--no-update]` to fix the lock file.
+(trending-it-py3.12) trynkewicz@trynkewicz-VMware-Virtual-Platform:~/project/trending-it$ cat pyproject.toml 
+[tool.poetry]
+name = "trending-it"
+version = "0.1.0"
+description = ""
+authors = ["kirillskyeng <kirill.netreba@skyeng.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "^4.0.4"
+djangorestframework = "^3.13.1"
+asgiref = "^3.5.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+(trending-it-py3.12) trynkewicz@trynkewicz-VMware-Virtual-Platform:~/project/trending-it$ poetry install
+Installing dependencies from lock file
+
+pyproject.toml changed significantly since poetry.lock was last generated. Run `poetry lock [--no-update]` to fix the lock file.
